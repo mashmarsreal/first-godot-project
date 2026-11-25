@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dp15wwjxfiouj"]
+
+[ext_resource type="Script" uid="uid://dfx2l1oiuhi2g" path="res://Scripts/UI/gui.gd" id="1_q081c"]
+[ext_resource type="Texture2D" uid="uid://qqfwpp33qn8s" path="res://Assets/UI/StatsBar.png" id="1_vqpta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koqh4"]
+atlas = ExtResource("1_vqpta")
+region = Rect2(0, 64, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw0cd"]
+atlas = ExtResource("1_vqpta")
+region = Rect2(28, 64, 174, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_721ml"]
+atlas = ExtResource("1_vqpta")
+region = Rect2(28, 96, 174, 32)
+
+[node name="GUI" type="Node" unique_id=805254152 groups=["GUI"]]
+script = ExtResource("1_q081c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1981238976]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=346697108]
+layout_mode = 2
+texture = SubResource("AtlasTexture_koqh4")
+stretch_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer" unique_id=623094150]
+layout_mode = 2
+texture_under = SubResource("AtlasTexture_jw0cd")
+texture_progress = SubResource("AtlasTexture_721ml")

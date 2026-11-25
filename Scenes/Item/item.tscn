@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cuwkv5r1lec50"]
+
+[ext_resource type="Script" uid="uid://cbi0670uvts2x" path="res://Scripts/Items/item.gd" id="1_hvuqc"]
+[ext_resource type="Texture2D" uid="uid://bmu630aeuylo" path="res://Assets/Items/PermataBiru.png" id="1_i10cy"]
+
+[node name="Item" type="RigidBody2D" unique_id=1045799768]
+collision_layer = 8
+collision_mask = 10
+inertia = 3.16
+continuous_cd = 1
+script = ExtResource("1_hvuqc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695799663]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_i10cy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1292351244]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(6, -5, 7, -4, 7, 0, 0, 6, -7, 0, -7, -4, -6, -5)
